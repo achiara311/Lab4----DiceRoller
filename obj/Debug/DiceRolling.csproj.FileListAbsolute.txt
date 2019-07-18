@@ -1,0 +1,7 @@
+C:\Users\achia\OneDrive\Desktop\exercises\Labs\DiceRolling\bin\Debug\DiceRolling.exe.config
+C:\Users\achia\OneDrive\Desktop\exercises\Labs\DiceRolling\bin\Debug\DiceRolling.exe
+C:\Users\achia\OneDrive\Desktop\exercises\Labs\DiceRolling\bin\Debug\DiceRolling.pdb
+C:\Users\achia\OneDrive\Desktop\exercises\Labs\DiceRolling\obj\Debug\DiceRolling.csprojAssemblyReference.cache
+C:\Users\achia\OneDrive\Desktop\exercises\Labs\DiceRolling\obj\Debug\DiceRolling.csproj.CoreCompileInputs.cache
+C:\Users\achia\OneDrive\Desktop\exercises\Labs\DiceRolling\obj\Debug\DiceRolling.exe
+C:\Users\achia\OneDrive\Desktop\exercises\Labs\DiceRolling\obj\Debug\DiceRolling.pdb
