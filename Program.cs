@@ -11,44 +11,46 @@ namespace DiceRolling
         public static Random random = new Random();
 
         static void Main(string[] args)
-        {   
+        {
+            WelcomeUser();
+            string input = Console.ReadLine().ToLower();
             bool repeat = true;
             while (repeat)
             {
-                WelcomeUser();
-                string input = Console.ReadLine().ToLower();
+
                 if (input == "y")
                 {
-                    Console.WriteLine("How many sides do the dice have?");
-                    int answer = int.Parse(Console.ReadLine());
-
+                    int answer = TryParseInt("How many sides do the dice have?");
 
                     int number = RandomNumbers(answer);
                     int numberTwo = RandomNumbers(answer);
                     Console.WriteLine($"{number}, {numberTwo}");
 
+                    repeat = true;
+
                 }
-               
+                else if (input == "n")
+                {
+                    Console.WriteLine("See you later.");
+                    break;
+                }
                 else
                 {
-                    Console.WriteLine("You need to go home.");
-                    repeat = false;
-                         //breaks you out of loop
+                    Console.WriteLine("Go home and eat your nuggets, Becca. You're drunk.");
                     break;
                 }
 
                 Console.WriteLine("Do you want to roll again?");
                 input = Console.ReadLine().ToLower();
-                if(input != "y")
+                if (input != "y" && input != "yes")
                 {
                     Console.WriteLine("Good Bye!");
                     repeat = false;
-                }
-                Console.Clear();  
+                }     
+
             }
             Console.ReadKey();
         }
-
 
         public static void WelcomeUser()
         {
@@ -56,8 +58,6 @@ namespace DiceRolling
         }
 
         //Function to get random number
-
-
         public static int RandomNumbers(int number)
         {
             number = random.Next(1, number + 1);
@@ -66,8 +66,21 @@ namespace DiceRolling
 
         }
 
-       
-        
+        public static int TryParseInt(string message)
+        {
+            try
+            {
+                Console.WriteLine(message);
+                int answer = int.Parse(Console.ReadLine());
+                return answer;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Not a number try again\n");
+                return TryParseInt(message);
+            }
+        }
+
     }
 }
 
